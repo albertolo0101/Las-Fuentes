@@ -965,6 +965,8 @@ img { display: block; max-width: 100%; }
   flex-direction: column;
   align-items: center;
   gap: 6px;
+  z-index: 2;
+  pointer-events: none;
 }
 .map-pin .pin-dot {
   width: 18px; height: 18px;

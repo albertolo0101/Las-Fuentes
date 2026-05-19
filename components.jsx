@@ -405,12 +405,18 @@ function LocationSection() {
             </div>
           </div>
 
-          <div className="location-map" aria-label="Mapa de ubicación">
+          <div className="location-map" aria-label="Mapa de ubicación — Centro Recreativo Las Fuentes, Chiantla">
+            <iframe
+              src="https://maps.google.com/maps?q=15.3610512,-91.4727492&z=17&output=embed&t=k"
+              title="Ubicación Centro Recreativo Las Fuentes"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              style={{ position: "absolute", inset: 0, width: "100%", height: "100%", border: 0 }}
+            />
             <div className="map-pin">
               <span className="pin-dot" />
               <span className="pin-label">Las Fuentes</span>
             </div>
-            <span className="map-ph">MAP · Chiantla, Huehuetenango</span>
           </div>
         </div>
       </div>

@@ -8,7 +8,8 @@
       "Bash(tar -xf design.html)",
       "Bash(mkdir -p \"c:/Users/alber/Documents/2026/LasFuentesHuehue/Las-Fuentes/assets\")",
       "Bash(cp \"c:/Users/alber/Documents/2026/LasFuentesHuehue/Las-Fuentes/lasfuentes/project/assets/logo-las-fuentes.png\" \"c:/Users/alber/Documents/2026/LasFuentesHuehue/Las-Fuentes/assets/\")",
-      "Bash(cp \"c:/Users/alber/Documents/2026/LasFuentesHuehue/Las-Fuentes/lasfuentes/project/assets/logo-transparent.png\" \"c:/Users/alber/Documents/2026/LasFuentesHuehue/Las-Fuentes/assets/\")"
+      "Bash(cp \"c:/Users/alber/Documents/2026/LasFuentesHuehue/Las-Fuentes/lasfuentes/project/assets/logo-transparent.png\" \"c:/Users/alber/Documents/2026/LasFuentesHuehue/Las-Fuentes/assets/\")",
+      "Bash(curl -sI \"https://maps.app.goo.gl/ZqDfg9SMSZjkJdDP7\")"
     ]
   }
 }
