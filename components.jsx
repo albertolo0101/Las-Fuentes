@@ -255,7 +255,7 @@ function RestaurantSection() {
               <p>Entradas, sopas, carnes a la parrilla, postres caseros y bebidas naturales. Carta actualizada cada temporada.</p>
             </div>
             <div className="menu-cta-actions">
-              <a className="btn btn-ink" href="#" onClick={(e) => e.preventDefault()}>
+              <a className="btn btn-ink" href="assets/menu.pdf" target="_blank" rel="noopener">
                 <Icon.Pdf /> Ver el menú completo (PDF)
               </a>
               <a
