@@ -104,25 +104,26 @@ const ROOMS = [
 
 // --- Collage de eventos ----------------------------------------------------
 const EVENTS = [
-  { cls: "ec-1", img: "assets/eventos-generico.jpeg", label: "Evento en Las Fuentes" },
-  { cls: "ec-2", img: "assets/evento-zumba.jpg",      label: "Actividades y recreación" },
-  { cls: "ec-3", img: "assets/evento-ciclismo.png",   label: "Actividades al aire libre" },
-  { cls: "ec-4", img: "assets/evento-psicina.jpg",    label: "Área de piscinas" },
+  { cls: "ec-1", img: "assets/eventos-generico.jpeg",  label: "Evento en Las Fuentes" },
+  { cls: "ec-2", img: "assets/evento-zumba.jpg",       label: "Actividades y recreación" },
+  { cls: "ec-3", img: "assets/evento-ciclismo.jpg",    label: "Actividades al aire libre" },
+  { cls: "ec-4", img: "assets/evento-psicina.jpg",     label: "Área de piscinas" },
+  { cls: "ec-5", img: "assets/evento-bautizo.jpg",     label: "Piscina para bautizos evangélicos" },
 ];
 
 // --- Amenidades ------------------------------------------------------------
 const AMENITIES = [
-  { icon: "Pool",    name: "3 Piscinas",               desc: "Para adultos, niños y temperatura agradable.", featured: true },
-  { icon: "Park",    name: "Centro recreativo jardín", desc: "Área verde amplia para relajarse, jugar y disfrutar en familia." },
-  { icon: "Tienda",  name: "Tiendita",                 desc: "Chucherías, snacks y toda clase de bebidas para el antojo." },
-  { icon: "Barra",   name: "Barra",                    desc: "Tragos, cervezas, bebidas artesanales y refrescos." },
-  { icon: "Soccer",  name: "Cancha de fútbol",         desc: "Reglamentaria, césped natural." },
-  { icon: "Chapel",  name: "Capilla privada",          desc: "Para ceremonias íntimas y bendiciones." },
-  { icon: "Garden",  name: "Jardines del hotel",       desc: "Senderos floridos entre los árboles." },
-  { icon: "Tree",    name: "Jardines del restaurante", desc: "Comer al aire libre, rodeado de pinos." },
-  { icon: "Walk",    name: "Caminatas naturales",      desc: "Rutas guiadas por los Cuchumatanes." },
-  { icon: "View",    name: "Miradores escénicos",      desc: "Vistas amplias de la sierra y el valle." },
-  { icon: "Parking", name: "Parqueo amplio",           desc: "Para vehículos particulares y buses." },
+  { icon: "Pool",    name: "3 Piscinas",               desc: "Para adultos, niños y temperatura agradable. El corazón del centro recreativo.", img: "assets/evento-psicina.jpg" },
+  { icon: "Park",    name: "Habitaciones limpias",     desc: "Cómodas, tranquilas y rodeadas de bosque. Cada habitación con baño privado, ropa de cama cuidada y vista al jardín.", img: "assets/cuarto-bosque.jpg" },
+  { icon: "Soccer",  name: "Cancha de fútbol",         desc: "Césped natural para partidos y actividades deportivas. También habilitamos el espacio para eventos deportivos, competencias y actividades grupales al aire libre.", img: "assets/evento-ciclismo.jpg" },
+  { icon: "Garden",  name: "Jardines del hotel",       desc: "Senderos floridos entre los árboles, perfectos para caminar al amanecer.",       img: "assets/amen-jardines-hotel.jpg" },
+  { icon: "Tree",    name: "Jardines del restaurante", desc: "Comer al aire libre, rodeado de pinos y brisa de montaña.",                      img: "assets/amen-jardines-restaurante.jpg" },
+  { icon: "Walk",    name: "Caminatas naturales",      desc: "Senderos limpios dentro del centro recreativo para explorar el bosque.",         img: "assets/amen-caminatas.jpg" },
+  { icon: "View",    name: "Espacios amplios",      desc: "Vistas amplias de la sierra de los Cuchumatanes.",                              img: "assets/amen-mirador.jpg" },
+  { icon: "Chapel",  name: "Capilla privada",          desc: "Para ceremonias íntimas, bendiciones y momentos de reflexión.",                  img: "assets/amen-capilla.jpg" },
+  { icon: "Tienda",  name: "Tiendita",                 desc: "Chucherías, snacks y toda clase de bebidas para el antojo.",                     img: "assets/amen-tienda.jpg" },
+  { icon: "Barra",   name: "Barra",                    desc: "Tragos, cervezas, bebidas artesanales y refrescos para todos.",                  img: "assets/amen-barra.jpg" },
+  { icon: "Parking", name: "Parqueo amplio",           desc: "Para vehículos particulares y buses. Seguro y techado.",                         img: "assets/amen-parqueo.jpg" },
 ];
 
 // --- Platillos (restaurante) -----------------------------------------------
@@ -130,7 +131,7 @@ const DISHES = [
   { id: 1, eyebrow: "Especialidad de la casa", name: "Platillo del chef",  desc: "Ingredientes frescos del día, preparados a la leña.",   span: "span-7", img: "assets/plato-comida.png" },
   { id: 2, eyebrow: "Para compartir",          name: "Plato cervecero",    desc: "Antojitos, embutidos y acompañamientos para el grupo.", span: "span-5", img: "assets/plato-cervecero.jpeg" },
   { id: 3, eyebrow: "Botana",                  name: "Nachos especiales",  desc: "Crujientes, con guacamol, frijoles y crema.",           span: "span-4", img: "assets/plato-nachos.jpg" },
-  { id: 4, eyebrow: "Bebidas",                 name: "Mojito de la casa",  desc: "Refrescante, natural, preparado al momento.",           span: "span-4", img: "assets/plato-mojito.png" },
+  { id: 4, eyebrow: "Bebidas",                 name: "Bebidas refrescantes",  desc: "Refrescante, natural, preparado al momento.",           span: "span-4", img: "assets/plato-mojito.png" },
 ];
 
 Object.assign(window, { Icon, WA_NUMBER, wa, ROOMS, EVENTS, AMENITIES, DISHES });

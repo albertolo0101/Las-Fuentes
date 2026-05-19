@@ -9,7 +9,14 @@
       "Bash(mkdir -p \"c:/Users/alber/Documents/2026/LasFuentesHuehue/Las-Fuentes/assets\")",
       "Bash(cp \"c:/Users/alber/Documents/2026/LasFuentesHuehue/Las-Fuentes/lasfuentes/project/assets/logo-las-fuentes.png\" \"c:/Users/alber/Documents/2026/LasFuentesHuehue/Las-Fuentes/assets/\")",
       "Bash(cp \"c:/Users/alber/Documents/2026/LasFuentesHuehue/Las-Fuentes/lasfuentes/project/assets/logo-transparent.png\" \"c:/Users/alber/Documents/2026/LasFuentesHuehue/Las-Fuentes/assets/\")",
-      "Bash(curl -sI \"https://maps.app.goo.gl/ZqDfg9SMSZjkJdDP7\")"
+      "Bash(curl -sI \"https://maps.app.goo.gl/ZqDfg9SMSZjkJdDP7\")",
+      "Bash(findstr \"amen-\")",
+      "Bash(magick --version)",
+      "Bash(ffmpeg -version)",
+      "Bash(node -e \"require\\('sharp'\\)\")",
+      "Bash(node -e ' *)",
+      "Bash(node -e \"require\\('sharp'\\); console.log\\(require.resolve\\('sharp'\\)\\)\")",
+      "Bash(node -e \"const p=require\\('child_process'\\).execSync\\('npm root -g'\\).toString\\(\\).trim\\(\\); console.log\\(p\\)\")"
     ]
   }
 }

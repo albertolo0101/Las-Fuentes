@@ -7,7 +7,7 @@
   <!-- ===== Primary SEO ===== -->
   <title>Centro Recreativo Las Fuentes | Hotel y Salón de Eventos — Chiantla, Huehuetenango</title>
   <meta name="description" content="Hotel y centro de eventos rodeado de naturaleza en Chiantla, Huehuetenango, Guatemala. Habitaciones desde Q175/noche. Salones para bodas, quinceaños y eventos corporativos con catering. 3 piscinas, jardín recreativo, barra y tiendita. Reservas por WhatsApp." />
-  <meta name="keywords" content="hotel chiantla, hotel huehuetenango, hospedaje chiantla, alojamiento huehuetenango, salón de eventos huehuetenango, centro de eventos chiantla, bodas huehuetenango, quinceaños huehuetenango, eventos corporativos huehuetenango, bautizos huehuetenango, salón de bodas chiantla, catering huehuetenango, Las Fuentes, centro recreativo huehuetenango, hotel naturaleza guatemala, piscinas huehuetenango, jardín recreativo chiantla, barra tragos huehuetenango, tiendita chucherías, area recreativa chiantla" />
+  <meta name="keywords" content="hotel chiantla, hotel huehuetenango, hospedaje chiantla, alojamiento huehuetenango, salón de eventos huehuetenango, centro de eventos chiantla, bodas huehuetenango, quinceaños huehuetenango, eventos corporativos huehuetenango, bautizos huehuetenango, bautizos evangélicos huehuetenango, piscina para bautizos evangélicos, salón de bodas chiantla, catering huehuetenango, Las Fuentes, centro recreativo huehuetenango, hotel naturaleza guatemala, piscinas huehuetenango, jardín recreativo chiantla, barra tragos huehuetenango, tiendita chucherías, area recreativa chiantla" />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="Centro Recreativo Las Fuentes" />
   <meta name="geo.region" content="GT-HU" />
@@ -45,28 +45,53 @@
           "addressCountry": "GT"
         },
         "hasMap": "https://maps.app.goo.gl/ZqDfg9SMSZjkJdDP7",
-        "openingHoursSpecification": {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-          "opens": "07:00",
-          "closes": "21:00"
-        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "name": "Hotel — Recepción",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+            "opens": "00:00",
+            "closes": "23:59"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "name": "Restaurante",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+            "opens": "07:00",
+            "closes": "18:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "name": "Centro Recreativo",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+            "opens": "09:00",
+            "closes": "20:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "name": "Barra",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+            "opens": "07:00",
+            "closes": "22:00"
+          }
+        ],
         "checkinTime": "14:00",
         "checkoutTime": "13:00",
         "priceRange": "Q175–Q500",
         "numberOfRooms": 4,
         "petsAllowed": false,
         "amenityFeature": [
-          { "@type": "LocationFeatureSpecification", "name": "3 Piscinas",              "value": true },
-          { "@type": "LocationFeatureSpecification", "name": "Centro recreativo jardín","value": true },
-          { "@type": "LocationFeatureSpecification", "name": "Tiendita de chucherías y bebidas", "value": true },
-          { "@type": "LocationFeatureSpecification", "name": "Barra de tragos y bebidas","value": true },
-          { "@type": "LocationFeatureSpecification", "name": "Estacionamiento",          "value": true },
-          { "@type": "LocationFeatureSpecification", "name": "Wi-Fi",                   "value": true },
-          { "@type": "LocationFeatureSpecification", "name": "Capilla privada",          "value": true },
-          { "@type": "LocationFeatureSpecification", "name": "Jardines",                 "value": true },
-          { "@type": "LocationFeatureSpecification", "name": "Cancha de fútbol",         "value": true },
-          { "@type": "LocationFeatureSpecification", "name": "Miradores escénicos",      "value": true }
+          { "@type": "LocationFeatureSpecification", "name": "3 Piscinas",                           "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Piscina para bautizos evangélicos",    "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Centro recreativo jardín",             "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Tiendita de chucherías y bebidas",     "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Barra de tragos y bebidas",            "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Estacionamiento",                      "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Wi-Fi",                                "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Capilla privada",                      "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Jardines",                             "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Cancha de fútbol",                     "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Miradores escénicos",                  "value": true }
         ],
         "containsPlace": { "@id": "#venue" }
       },
@@ -74,7 +99,7 @@
         "@type": "EventVenue",
         "@id": "#venue",
         "name": "Salón de Eventos Las Fuentes",
-        "description": "Centro de eventos en Chiantla, Huehuetenango para bodas, quinceaños, cumpleaños, bautizos, primeras comuniones y reuniones corporativas. Los paquetes incluyen mesas, sillas, mantelería, sonido, energía y catering disponible. Espacios cubiertos y jardines al aire libre.",
+        "description": "Centro de eventos en Chiantla, Huehuetenango para bodas, quinceaños, cumpleaños, bautizos, bautizos evangélicos, primeras comuniones y reuniones corporativas. Piscina disponible para bautizos religiosos. Los paquetes incluyen mesas, sillas, mantelería, sonido, energía y catering disponible. Espacios cubiertos y jardines al aire libre.",
         "url": "https://lasfuentes.gt/#eventos",
         "telephone": "+50255846968",
         "address": {
@@ -88,41 +113,66 @@
         "openingHoursSpecification": {
           "@type": "OpeningHoursSpecification",
           "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-          "opens": "07:00",
-          "closes": "21:00"
+          "opens": "09:00",
+          "closes": "20:00"
         },
         "amenityFeature": [
-          { "@type": "LocationFeatureSpecification", "name": "Mesas y sillas",         "value": true },
-          { "@type": "LocationFeatureSpecification", "name": "Catering disponible",    "value": true },
-          { "@type": "LocationFeatureSpecification", "name": "Mantelería y montaje",   "value": true },
-          { "@type": "LocationFeatureSpecification", "name": "Sonido y electricidad",  "value": true },
-          { "@type": "LocationFeatureSpecification", "name": "Estacionamiento amplio", "value": true },
-          { "@type": "LocationFeatureSpecification", "name": "Salón cubierto",         "value": true },
-          { "@type": "LocationFeatureSpecification", "name": "Jardines al aire libre", "value": true },
-          { "@type": "LocationFeatureSpecification", "name": "Capilla privada",        "value": true }
+          { "@type": "LocationFeatureSpecification", "name": "Mesas y sillas",                       "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Catering disponible",                  "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Mantelería y montaje",                 "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Sonido y electricidad",                "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Estacionamiento amplio",               "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Salón cubierto",                       "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Jardines al aire libre",               "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Capilla privada",                      "value": true },
+          { "@type": "LocationFeatureSpecification", "name": "Piscina para bautizos evangélicos",    "value": true }
         ]
       },
       {
         "@type": "LocalBusiness",
         "@id": "#business",
         "name": "Centro Recreativo Las Fuentes",
-        "description": "Hotel y centro de eventos en Chiantla, Huehuetenango, Guatemala. Hospedaje cómodo, salones para bodas y eventos, piscinas, jardines y vistas panorámicas a la sierra.",
+        "description": "Hotel y centro de eventos en Chiantla, Huehuetenango, Guatemala. Hospedaje cómodo, salones para bodas, quinceaños, bautizos evangélicos y reuniones. Piscina para bautizos religiosos. Restaurante, barra, jardines y vistas panorámicas a la sierra de los Cuchumatanes.",
         "url": "https://lasfuentes.gt",
         "telephone": "+50255846968",
+        "email": "lasfuenteschiantla@gmail.com",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Km 268, Carretera a Chiantla",
           "addressLocality": "Chiantla",
           "addressRegion": "Huehuetenango",
+          "postalCode": "13001",
           "addressCountry": "GT"
         },
-        "hasMap": "https://maps.app.goo.gl/ZqDfg9SMSZjkJdDP7",
-        "openingHoursSpecification": {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-          "opens": "07:00",
-          "closes": "21:00"
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "15.3610512",
+          "longitude": "-91.4727492"
         },
+        "hasMap": "https://maps.app.goo.gl/ZqDfg9SMSZjkJdDP7",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "name": "Restaurante",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+            "opens": "07:00",
+            "closes": "18:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "name": "Centro Recreativo",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+            "opens": "09:00",
+            "closes": "20:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "name": "Barra",
+            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+            "opens": "07:00",
+            "closes": "22:00"
+          }
+        ],
         "priceRange": "Q175–Q500",
         "servesCuisine": "Guatemalteca, Huehueteca",
         "sameAs": [
@@ -144,8 +194,16 @@
     Centro Recreativo Las Fuentes
     Hotel y Salón de Eventos · Chiantla, Huehuetenango, Guatemala
     Km 268 Carretera a Chiantla · Tel/WhatsApp: +502 5584-6968
-    Horario: 7:00–21:00 todos los días · Check in 14:00 · Check out 13:00
+    Email: lasfuenteschiantla@gmail.com
+    Coords: 15.3610512, -91.4727492
     Google Maps: https://maps.app.goo.gl/ZqDfg9SMSZjkJdDP7
+
+    HORARIOS:
+      Hotel / Recepción: 24 horas · 7 días
+      Restaurante: 7:00 a.m. – 6:00 p.m. · todos los días
+      Centro Recreativo: 9:00 a.m. – 8:00 p.m. · todos los días
+      Barra: 7:00 a.m. – 10:00 p.m. · todos los días
+      Check in: 14:00 · Check out: 13:00
 
     HOTEL — Habitaciones:
       Individual: 1 persona · Q175/noche
@@ -154,12 +212,14 @@
       Casita: hasta 5 personas · Q500/noche
       Persona extra: Q50
 
-    EVENTOS — bodas, quinceaños, cumpleaños, bautizos, corporativos
+    EVENTOS — bodas, quinceaños, cumpleaños, bautizos, bautizos evangélicos, corporativos
     Paquetes incluyen: mesas, sillas, mantelería, sonido, catering disponible
     Espacios cubiertos y jardines al aire libre. Capilla privada disponible.
+    Piscina disponible para bautizos religiosos evangélicos.
 
     AMENIDADES:
       3 piscinas (adultos, niños, agua templada)
+      Piscina para bautizos evangélicos
       Centro recreativo jardín (área verde familiar)
       Tiendita: chucherías, snacks y bebidas
       Barra: tragos, cervezas y bebidas artesanales

@@ -674,6 +674,31 @@ img { display: block; max-width: 100%; }
   opacity: 0.85;
   line-height: 1.5;
 }
+.dish.dish-menu-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 6px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: filter .25s;
+}
+.dish.dish-menu-cta:hover { filter: brightness(1.1); }
+.dish-menu-label {
+  font-family: var(--f-display);
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 600;
+  color: var(--cream);
+  line-height: 1;
+}
+.dish-menu-sub {
+  font-size: 13px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(250,247,240,0.75);
+  margin-bottom: 8px;
+}
 .dish.span-6 { grid-column: span 6; }
 .dish.span-7 { grid-column: span 7; min-height: 380px; }
 .dish.span-5 { grid-column: span 5; min-height: 380px; }
@@ -768,7 +793,7 @@ img { display: block; max-width: 100%; }
 .events-collage {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 160px 220px 160px;
+  grid-template-rows: 160px 220px 160px 220px;
   gap: 14px;
 }
 .events-collage .ec {
@@ -787,6 +812,8 @@ img { display: block; max-width: 100%; }
 .events-collage .ec-3 { grid-row: span 2; }
 .events-collage .ec-3::before { background: linear-gradient(160deg, #f5e6c8, #c4a07a, #6e4a28); }
 .events-collage .ec-4::before { background: linear-gradient(160deg, #b8d4d8, #6ba9c5, #3d7a96); }
+.events-collage .ec-5 { grid-column: span 2; }
+.events-collage .ec-5::before { background: linear-gradient(160deg, #c8e0e8, #7ab0cc, #2d5e7e); }
 .events-collage .ph-label {
   position: absolute;
   bottom: 8px; left: 10px;
@@ -850,74 +877,137 @@ img { display: block; max-width: 100%; }
   .event-incl-list { grid-template-columns: 1fr; }
 }
 
-/* ========== Amenities ========== */
+/* ========== Amenities Gallery ========== */
 .amenities { background: var(--cream); }
-.amen-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-}
-.amen-card {
-  background: var(--paper);
-  border: 1px solid var(--line);
+
+.amen-gallery {
+  position: relative;
   border-radius: var(--r-lg);
-  padding: 28px 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  min-height: 200px;
-  transition: transform .2s ease, border-color .2s, box-shadow .2s;
-}
-.amen-card:hover {
-  transform: translateY(-3px);
-  border-color: var(--line-strong);
+  overflow: hidden;
+  aspect-ratio: 16 / 7;
+  background: var(--ink);
   box-shadow: var(--shadow-2);
 }
-.amen-icon {
-  width: 44px; height: 44px;
+
+.amen-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity .7s ease;
+  pointer-events: none;
+}
+.amen-slide.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.amen-slide-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.amen-slide-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(10,18,10,.88) 0%, rgba(10,18,10,.25) 55%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 40px 48px;
+  gap: 10px;
+}
+
+.amen-slide-icon {
+  width: 48px; height: 48px;
   border-radius: var(--r-md);
-  background: var(--bone-soft);
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--forest);
-}
-.amen-icon svg { width: 22px; height: 22px; }
-.amen-card .num {
-  font-family: var(--f-display);
-  font-size: 14px;
-  color: var(--char-mute);
-}
-.amen-card .name {
-  font-family: var(--f-display);
-  font-size: 22px;
-  line-height: 1.15;
-  color: var(--ink);
-  font-weight: 500;
-}
-.amen-card .desc {
-  font-size: 13px;
-  color: var(--char-soft);
-  line-height: 1.5;
-  margin-top: auto;
-}
-.amen-card.featured {
-  grid-column: span 2;
-  background: var(--forest);
   color: var(--cream);
-  border-color: var(--forest);
+  margin-bottom: 4px;
 }
-.amen-card.featured .amen-icon { background: rgba(255,255,255,0.1); color: var(--cream); }
-.amen-card.featured .name, .amen-card.featured .num { color: var(--cream); }
-.amen-card.featured .desc { color: rgba(250,247,240,0.7); }
+.amen-slide-icon svg { width: 24px; height: 24px; }
 
-@media (max-width: 880px) {
-  .amen-grid { grid-template-columns: repeat(2, 1fr); }
-  .amen-card.featured { grid-column: span 2; }
+.amen-slide-name {
+  font-family: var(--f-display);
+  font-size: clamp(26px, 4vw, 46px);
+  font-weight: 500;
+  color: var(--cream);
+  line-height: 1.1;
 }
-@media (max-width: 480px) {
-  .amen-grid { grid-template-columns: 1fr; }
-  .amen-card.featured { grid-column: span 1; }
+
+.amen-slide-desc {
+  font-size: clamp(13px, 1.5vw, 16px);
+  color: rgba(250,247,240,0.8);
+  max-width: 480px;
+  line-height: 1.5;
+}
+
+.amen-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.25);
+  color: var(--cream);
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background .2s, transform .2s;
+  z-index: 4;
+  backdrop-filter: blur(4px);
+}
+.amen-nav:hover { background: rgba(255,255,255,0.3); transform: translateY(-50%) scale(1.08); }
+.amen-prev { left: 16px; }
+.amen-next { right: 16px; }
+
+.amen-counter {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: rgba(250,247,240,0.7);
+  font-family: var(--f-display);
+  z-index: 4;
+}
+
+.amen-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+.amen-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--line-strong);
+  border: none;
+  cursor: pointer;
+  transition: background .25s, transform .25s, width .25s;
+  padding: 0;
+}
+.amen-dot.active {
+  background: var(--forest);
+  width: 24px;
+  border-radius: 4px;
+}
+
+@media (max-width: 700px) {
+  .amen-gallery { aspect-ratio: 4 / 3; }
+  .amen-slide-overlay { padding: 24px 24px; }
+  .amen-nav { width: 38px; height: 38px; font-size: 22px; }
 }
 
 /* ========== Location strip ========== */

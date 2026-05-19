@@ -84,7 +84,7 @@ function Hero() {
           Descansa
           <span className="script">entre pinos</span>
         </h1>
-        <p className="hero-sub">Habitaciones rústicas y limpias, rodeadas de bosque y aire fresco de los Cuchumatanes.</p>
+        <p className="hero-sub">Habitaciones cómodas y limpias, rodeadas de bosque y aire fresco de los Cuchumatanes.</p>
         <div className="hero-actions">
           <a
             className="btn btn-wa"
@@ -107,13 +107,13 @@ function Hero() {
       </div>
 
       <div className="hero-pane hero-restaurant has-img">
-        <img src="assets/hero-restaurante.png" alt="" className="hero-bg" aria-hidden="true" />
+        <img src="assets/hero-restaurante.jpg" alt="" className="hero-bg" aria-hidden="true" />
         <div className="hero-tag"><span className="dot" />Restaurante · Cocina local</div>
         <h1 className="hero-h">
           Sabores
           <span className="script">de la sierra</span>
         </h1>
-        <p className="hero-sub">Cocina típica huehueteca con ingredientes frescos del valle, servida en el jardín al aire libre.</p>
+        <p className="hero-sub">Cocina contemporanea con ingredientes frescos, servida en el jardín al aire libre.</p>
         <div className="hero-actions">
           <a
             className="btn btn-wa"
@@ -200,12 +200,12 @@ function HotelSection() {
 
             <div className="hotel-promise">
               <div className="eyebrow">Lo que incluye</div>
-              <p>Una noche cómoda, sin distracciones — solo el sonido del río y los pinos.</p>
+              <p>Una noche cómoda, sin distracciones — solo el sonido del arrollo y los pinos.</p>
               <ul className="promise-list">
-                <li><Icon.Check /> Desayuno típico incluido</li>
+                <li><Icon.Check /> Barra abierta hasta las 10:00 PM</li>
                 <li><Icon.Check /> Acceso libre a las 3 piscinas</li>
                 <li><Icon.Check /> Wi-Fi en áreas comunes</li>
-                <li><Icon.Check /> Parqueo techado para huéspedes</li>
+                <li><Icon.Check /> Parqueo para huéspedes</li>
               </ul>
               <div style={{ marginTop: 16, paddingTop: 16, borderTop: "1px solid rgba(255,255,255,0.15)", display: "flex", gap: 28 }}>
                 <div>
@@ -214,7 +214,7 @@ function HotelSection() {
                 </div>
                 <div>
                   <div style={{ fontSize: 10, letterSpacing: "0.18em", textTransform: "uppercase", opacity: 0.6, marginBottom: 4 }}>Check out</div>
-                  <div style={{ fontFamily: "var(--f-display)", fontSize: 20 }}>13:00 h</div>
+                  <div style={{ fontFamily: "var(--f-display)", fontSize: 20 }}>12:30 h</div>
                 </div>
               </div>
             </div>
@@ -232,32 +232,44 @@ function RestaurantSection() {
       <div className="container">
         <div className="section-head">
           <span className="section-num">02 / RESTAURANTE</span>
-          <h2 className="section-h">Cocina típica, <span className="script">al aire libre.</span></h2>
-          <p className="section-lede">Recetas huehuetecas con productos del día. Comer entre los árboles del jardín, mientras se enfría la tarde.</p>
+          <h2 className="section-h">Cocina contemporanea, <span className="script">al aire libre.</span></h2>
+          <p className="section-lede"> Comer entre los árboles del jardín, mientras se enfría la tarde.</p>
         </div>
 
         <div className="menu-grid">
-          {DISHES.map((d) => (
-            <article
-              key={d.id}
-              className={`dish ${d.span} has-img`}
-              style={{ backgroundImage: `url('${d.img}')`, backgroundSize: "cover", backgroundPosition: "center" }}
-            >
-              <div className="dish-eyebrow">{d.eyebrow}</div>
-              <h3 className="dish-name">{d.name}</h3>
-              <p className="dish-desc">{d.desc}</p>
-            </article>
-          ))}
+          {DISHES.map((d) =>
+            d.id === 1 ? (
+              <a
+                key={d.id}
+                href="assets/menu.pdf"
+                target="_blank"
+                rel="noopener"
+                className={`dish dish-menu-cta ${d.span} has-img`}
+                style={{ backgroundImage: `url('${d.img}')`, backgroundSize: "cover", backgroundPosition: "center" }}
+              >
+                <div className="dish-menu-label">Ver menú</div>
+                <div className="dish-menu-sub">Carta completa · PDF</div>
+                <Icon.ArrowRight size={28} />
+              </a>
+            ) : (
+              <article
+                key={d.id}
+                className={`dish ${d.span} has-img`}
+                style={{ backgroundImage: `url('${d.img}')`, backgroundSize: "cover", backgroundPosition: "center" }}
+              >
+                <div className="dish-eyebrow">{d.eyebrow}</div>
+                <h3 className="dish-name">{d.name}</h3>
+                <p className="dish-desc">{d.desc}</p>
+              </article>
+            )
+          )}
           <article className="menu-cta-card">
             <div>
-              <div className="eyebrow mc-eyebrow">Carta completa</div>
-              <h3>Más de 40 platillos para descubrir.</h3>
-              <p>Entradas, sopas, carnes a la parrilla, postres caseros y bebidas naturales. Carta actualizada cada temporada.</p>
+              <div className="eyebrow mc-eyebrow">¿Listo para comer?</div>
+              <h3>Reserva tu mesa o escríbenos.</h3>
+              <p>Entradas, sopas, carnes a la parrilla, postres caseros y bebidas naturales. Todos los días de 7 a.m. a 9 p.m.</p>
             </div>
             <div className="menu-cta-actions">
-              <a className="btn btn-ink" href="assets/menu.pdf" target="_blank" rel="noopener">
-                <Icon.Pdf /> Ver el menú completo (PDF)
-              </a>
               <a
                 className="btn btn-wa"
                 href={wa("¡Hola! Me gustaría reservar mesa en el restaurante Las Fuentes. ¿Para cuántas personas tienen disponibilidad?")}
@@ -271,11 +283,11 @@ function RestaurantSection() {
         </div>
 
         <div className="hours-strip">
-          <div className="item"><span className="lbl">Horario</span><span className="val">7:00 a.m. — 9:00 p.m.</span></div>
-          <div className="item"><span className="lbl">Días</span><span className="val">Todos los días</span></div>
+          <div className="item"><span className="lbl">Restaurante</span><span className="val">7:00 a.m. — 6:00 p.m.</span></div>
+          <div className="item"><span className="lbl">Barra</span><span className="val">7:00 a.m. — 10:00 p.m.</span></div>
           <div className="item"><span className="lbl">Para llevar</span><span className="val">Disponible</span></div>
           <div className="item"><span className="lbl">Tiendita</span><span className="val">Chucherías y bebidas</span></div>
-          <div className="item"><span className="lbl">Barra</span><span className="val">Tragos y bebidas artesanales</span></div>
+          <div className="item"><span className="lbl">Días</span><span className="val">Todos los días</span></div>
         </div>
       </div>
     </section>
@@ -301,6 +313,7 @@ function EventsSection() {
               <span>Quinceaños</span>
               <span>Corporativos</span>
               <span>Bautizos</span>
+              <span>Bautizos evangélicos</span>
               <span>Reuniones familiares</span>
             </div>
 
@@ -311,8 +324,10 @@ function EventsSection() {
                 <li><Icon.Check />Servicio de catering disponible</li>
                 <li><Icon.Check />Mantelería y montaje básico</li>
                 <li><Icon.Check />Sonido y energía eléctrica</li>
+                <li><Icon.Check />Churrasqueras</li>
                 <li><Icon.Check />Parqueo amplio</li>
                 <li><Icon.Check />Espacios cubiertos y al aire libre</li>
+                <li><Icon.Check />Piscina para bautizos evangélicos</li>
               </ul>
             </div>
 
@@ -345,6 +360,18 @@ function EventsSection() {
 
 // --- Amenities --------------------------------------------------------------
 function AmenitiesSection() {
+  const [current, setCurrent] = useState(0);
+  const [paused, setPaused] = useState(false);
+  const total = AMENITIES.length;
+
+  useEffect(() => {
+    if (paused) return;
+    const id = setInterval(() => setCurrent(c => (c + 1) % total), 5000);
+    return () => clearInterval(id);
+  }, [paused, total]);
+
+  const go = (i) => setCurrent((i + total) % total);
+
   return (
     <section id="amenidades" className="section amenities">
       <div className="container">
@@ -353,20 +380,42 @@ function AmenitiesSection() {
           <h2 className="section-h">Todo en un mismo lugar, <span className="script">rodeado de bosque.</span></h2>
         </div>
 
-        <div className="amen-grid">
+        <div
+          className="amen-gallery"
+          onMouseEnter={() => setPaused(true)}
+          onMouseLeave={() => setPaused(false)}
+        >
           {AMENITIES.map((a, i) => {
             const IconCmp = Icon[a.icon];
             return (
-              <article key={a.name} className={`amen-card ${a.featured ? "featured" : ""}`}>
-                <div className="amen-icon"><IconCmp /></div>
-                <div>
-                  <div className="num">{String(i + 1).padStart(2, "0")}</div>
-                  <h3 className="name">{a.name}</h3>
+              <div key={a.name} className={`amen-slide ${i === current ? "active" : ""}`} aria-hidden={i !== current}>
+                <img src={a.img} alt={a.name} className="amen-slide-img" />
+                <div className="amen-slide-overlay">
+                  <div className="amen-slide-icon"><IconCmp /></div>
+                  <h3 className="amen-slide-name">{a.name}</h3>
+                  <p className="amen-slide-desc">{a.desc}</p>
                 </div>
-                <p className="desc">{a.desc}</p>
-              </article>
+              </div>
             );
           })}
+
+          <button className="amen-nav amen-prev" onClick={() => go(current - 1)} aria-label="Anterior">&#8249;</button>
+          <button className="amen-nav amen-next" onClick={() => go(current + 1)} aria-label="Siguiente">&#8250;</button>
+
+          <div className="amen-counter">{current + 1} / {total}</div>
+        </div>
+
+        <div className="amen-dots" role="tablist">
+          {AMENITIES.map((a, i) => (
+            <button
+              key={a.name}
+              className={`amen-dot ${i === current ? "active" : ""}`}
+              onClick={() => setCurrent(i)}
+              aria-label={a.name}
+              role="tab"
+              aria-selected={i === current}
+            />
+          ))}
         </div>
       </div>
     </section>
@@ -382,17 +431,20 @@ function LocationSection() {
           <div>
             <span className="section-num" style={{ color: "rgba(250,247,240,0.5)" }}>05 / CÓMO LLEGAR</span>
             <h2 className="section-h" style={{ marginTop: 14 }}>
-              En Chiantla, <span className="script">a un paso de la sierra.</span>
+              En Chiantla, Huehuetenango <span className="script">a un paso de la sierra.</span>
             </h2>
             <p className="section-lede" style={{ color: "rgba(250,247,240,0.7)", marginTop: 14 }}>
               Camino a los Cuchumatanes, rodeados de pinares y aire de montaña. A 12 minutos del centro de Huehuetenango.
             </p>
 
             <div className="location-meta">
-              <div className="item"><span className="lbl">Dirección</span><span className="val">Km 268, Carretera a Chiantla<small>Huehuetenango, Guatemala</small></span></div>
+              <div className="item"><span className="lbl">Dirección</span><span className="val">Las Fuentes, Aldea Los Regadíos, Chiantla<small>Huehuetenango, Guatemala</small></span></div>
               <div className="item"><span className="lbl">Teléfono</span><span className="val">+502 5584-6968<small>Llamadas y WhatsApp</small></span></div>
-              <div className="item"><span className="lbl">Horario</span><span className="val">7:00 a.m. — 9:00 p.m.<small>Todos los días</small></span></div>
-              <div className="item"><span className="lbl">Email</span><span className="val">hola@lasfuentes.gt<small>Respuesta en 24 h</small></span></div>
+              <div className="item"><span className="lbl">Hotel</span><span className="val">24 / 7<small>Recepción siempre disponible</small></span></div>
+              <div className="item"><span className="lbl">Restaurante</span><span className="val">7:00 a.m. — 6:00 p.m.<small>Todos los días</small></span></div>
+              <div className="item"><span className="lbl">Centro recreativo</span><span className="val">9:00 a.m. — 8:00 p.m.<small>Todos los días</small></span></div>
+              <div className="item"><span className="lbl">Barra</span><span className="val">7:00 a.m. — 10:00 p.m.<small>Todos los días</small></span></div>
+              <div className="item"><span className="lbl">Email</span><span className="val">lasfuenteschiantla@gmail.com<small>Respuesta en 24 h</small></span></div>
             </div>
 
             <div style={{ display: "flex", gap: 12, marginTop: 32, flexWrap: "wrap" }}>
@@ -457,11 +509,12 @@ function Footer() {
             </ul>
           </div>
           <div className="foot-col">
-            <h4>Horario</h4>
+            <h4>Horarios</h4>
             <ul>
-              <li>Lunes — Domingo</li>
-              <li>7:00 a.m. — 9:00 p.m.</li>
-              <li>Recepción 24 h para huéspedes</li>
+              <li>Hotel · 24 / 7</li>
+              <li>Restaurante · 7:00 a.m. — 6:00 p.m.</li>
+              <li>Centro recreativo · 9:00 a.m. — 8:00 p.m.</li>
+              <li>Barra · 7:00 a.m. — 10:00 p.m.</li>
             </ul>
           </div>
         </div>
