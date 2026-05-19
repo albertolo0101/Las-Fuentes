@@ -14,8 +14,8 @@ function Nav({ onOpenDrawer }) {
         <nav className="nav-links" aria-label="Principal">
           <a href="#hotel">Hotel</a>
           <a href="#restaurante">Restaurante</a>
+          <a href="#amenidades">Centro Recreativo</a>
           <a href="#eventos">Eventos</a>
-          <a href="#amenidades">Amenidades</a>
         </nav>
         <div className="nav-cta">
           <a
@@ -52,8 +52,8 @@ function Drawer({ open, onClose }) {
         <div className="drawer-links">
           <a onClick={(e) => { e.preventDefault(); go("#hotel"); }} href="#hotel">Hotel<Icon.ArrowRight /></a>
           <a onClick={(e) => { e.preventDefault(); go("#restaurante"); }} href="#restaurante">Restaurante<Icon.ArrowRight /></a>
+          <a onClick={(e) => { e.preventDefault(); go("#amenidades"); }} href="#amenidades">Centro Recreativo<Icon.ArrowRight /></a>
           <a onClick={(e) => { e.preventDefault(); go("#eventos"); }} href="#eventos">Eventos<Icon.ArrowRight /></a>
-          <a onClick={(e) => { e.preventDefault(); go("#amenidades"); }} href="#amenidades">Amenidades<Icon.ArrowRight /></a>
           <a onClick={(e) => { e.preventDefault(); go("#contacto"); }} href="#contacto">Cómo llegar<Icon.ArrowRight /></a>
         </div>
         <div className="drawer-foot">
@@ -77,6 +77,41 @@ function Drawer({ open, onClose }) {
 function Hero() {
   return (
     <section id="top" className="hero">
+      <div className="hero-location-bar" aria-label="Ubicación">
+        <Icon.Pin size={12} />
+        <span>Chiantla · Huehuetenango · Guatemala</span>
+      </div>
+
+      <div className="hero-pane hero-recreativo has-img">
+        <img src="assets/centro-recreativo.jpg" alt="" className="hero-bg" aria-hidden="true" />
+        <div className="hero-tag"><span className="dot" />Centro Recreativo · Piscinas</div>
+        <h1 className="hero-h">
+          Disfruta
+          <span className="script">en la naturaleza</span>
+        </h1>
+        <p className="hero-sub">Piscinas, jardines recreativos y actividades para toda la familia en plena sierra de los Cuchumatanes.</p>
+        <div className="hero-actions">
+          <a
+            className="btn btn-wa"
+            href={wa("¡Hola! Quisiera información sobre el centro recreativo Las Fuentes — piscinas, jardines y actividades.")}
+            target="_blank"
+            rel="noopener"
+          >
+            <Icon.Whatsapp size={18} />
+            Más información
+          </a>
+          <a className="btn btn-outline-light btn-sm" href="#amenidades">
+            Ver amenidades <Icon.ArrowRight size={14} />
+          </a>
+        </div>
+      </div>
+
+      <div className="hero-divider" aria-hidden="true" />
+      <div className="hero-divider hero-divider-2" aria-hidden="true" />
+      <div className="hero-emblem" aria-hidden="true">
+        <img src="assets/logo-transparent.png" alt="" />
+      </div>
+
       <div className="hero-pane hero-hotel has-img">
         <img src="assets/hero-hotel.jpg" alt="" className="hero-bg" aria-hidden="true" />
         <div className="hero-tag"><span className="dot" />Hotel · Habitaciones</div>
@@ -99,11 +134,6 @@ function Hero() {
             Ver habitaciones <Icon.ArrowRight size={14} />
           </a>
         </div>
-      </div>
-
-      <div className="hero-divider" aria-hidden="true" />
-      <div className="hero-emblem" aria-hidden="true">
-        <img src="assets/logo-transparent.png" alt="" />
       </div>
 
       <div className="hero-pane hero-restaurant has-img">
