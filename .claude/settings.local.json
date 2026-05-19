@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:api.anthropic.com)",
+      "Bash(curl -L -o \"c:/Users/alber/Documents/2026/LasFuentesHuehue/Las-Fuentes/design.html\" \"https://api.anthropic.com/v1/design/h/DT1DXVCO2ZzDAq4Ekwataw?open_file=Las+Fuentes+Landing.html\")",
+      "Bash(mv design.html design.html.gz)",
+      "Bash(gunzip design.html.gz)",
+      "Bash(tar -xf design.html)",
+      "Bash(mkdir -p \"c:/Users/alber/Documents/2026/LasFuentesHuehue/Las-Fuentes/assets\")",
+      "Bash(cp \"c:/Users/alber/Documents/2026/LasFuentesHuehue/Las-Fuentes/lasfuentes/project/assets/logo-las-fuentes.png\" \"c:/Users/alber/Documents/2026/LasFuentesHuehue/Las-Fuentes/assets/\")",
+      "Bash(cp \"c:/Users/alber/Documents/2026/LasFuentesHuehue/Las-Fuentes/lasfuentes/project/assets/logo-transparent.png\" \"c:/Users/alber/Documents/2026/LasFuentesHuehue/Las-Fuentes/assets/\")"
+    ]
+  }
+}
