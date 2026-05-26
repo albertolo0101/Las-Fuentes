@@ -83,7 +83,7 @@ function Hero() {
       </div>
 
       <div className="hero-pane hero-recreativo has-img">
-        <img src="assets/centro-recreativo.jpg" alt="" className="hero-bg" aria-hidden="true" />
+        <img src="assets/centro-recreativo.png" alt="" className="hero-bg" aria-hidden="true" />
         <div className="hero-tag"><span className="dot" />Centro Recreativo · Piscinas</div>
         <h1 className="hero-h">
           Disfruta
