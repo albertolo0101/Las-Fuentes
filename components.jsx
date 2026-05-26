@@ -525,8 +525,7 @@ function Footer() {
             <img src="assets/logo-transparent.png" alt="Las Fuentes" />
             <p>Centro Recreativo Las Fuentes — Hotel, restaurante y centro de eventos rodeado de naturaleza en Chiantla, Huehuetenango.</p>
             <div className="foot-social">
-              <a href="#" aria-label="Instagram"><Icon.Instagram /></a>
-              <a href="#" aria-label="Facebook"><Icon.Facebook /></a>
+              <a href="https://www.facebook.com/centro.recreativo.las.fuentes/?locale=es_LA" aria-label="Facebook" target="_blank" rel="noopener"><Icon.Facebook /></a>
               <a href={wa("¡Hola!")} aria-label="WhatsApp" target="_blank" rel="noopener"><Icon.Whatsapp size={16} /></a>
             </div>
           </div>
@@ -544,7 +543,7 @@ function Footer() {
             <ul>
               <li><a href={wa("¡Hola!")} target="_blank" rel="noopener">WhatsApp · +502 5584-6968</a></li>
               <li><a href="tel:+50255846968">Tel. +502 5584-6968</a></li>
-              <li><a href="mailto:hola@lasfuentes.gt">hola@lasfuentes.gt</a></li>
+              <li><a href="mailto:lasfuenteschiantla@gmail.com">lasfuenteschiantla@gmail.com</a></li>
             </ul>
           </div>
           <div className="foot-col">
