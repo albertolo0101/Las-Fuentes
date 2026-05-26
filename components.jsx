@@ -83,7 +83,11 @@ function Hero() {
       </div>
 
       <div className="hero-pane hero-recreativo has-img">
-        <img src="assets/centro-recreativo.png" alt="" className="hero-bg" aria-hidden="true" />
+        <picture>
+          {/* add <source srcSet="assets/centro-recreativo.webp" type="image/webp" /> once .webp is generated */}
+          <img src="assets/centro-recreativo.png" alt="" className="hero-bg"
+               fetchPriority="high" loading="eager" aria-hidden="true" />
+        </picture>
         <div className="hero-tag"><span className="dot" />Centro Recreativo · Piscinas</div>
         <h1 className="hero-h">
           Disfruta
@@ -113,7 +117,11 @@ function Hero() {
       </div>
 
       <div className="hero-pane hero-hotel has-img">
-        <img src="assets/hero-hotel.jpg" alt="" className="hero-bg" aria-hidden="true" />
+        <picture>
+          {/* add <source srcSet="assets/hero-hotel.webp" type="image/webp" /> once .webp is generated */}
+          <img src="assets/hero-hotel.jpg" alt="" className="hero-bg"
+               fetchPriority="high" loading="eager" aria-hidden="true" />
+        </picture>
         <div className="hero-tag"><span className="dot" />Hotel · Habitaciones</div>
         <h1 className="hero-h">
           Descansa
@@ -137,7 +145,8 @@ function Hero() {
       </div>
 
       <div className="hero-pane hero-restaurant has-img">
-        <img src="assets/hero-restaurante.jpg" alt="" className="hero-bg" aria-hidden="true" />
+        <img src="assets/hero-restaurante.jpg" alt="" className="hero-bg"
+             loading="eager" decoding="async" aria-hidden="true" />
         <div className="hero-tag"><span className="dot" />Restaurante · Cocina local</div>
         <h1 className="hero-h">
           Sabores
@@ -419,7 +428,7 @@ function AmenitiesSection() {
             const IconCmp = Icon[a.icon];
             return (
               <div key={a.name} className={`amen-slide ${i === current ? "active" : ""}`} aria-hidden={i !== current}>
-                <img src={a.img} alt={a.name} className="amen-slide-img" />
+                <img src={a.img} alt={a.name} className="amen-slide-img" decoding="async" />
                 <div className="amen-slide-overlay">
                   <div className="amen-slide-icon"><IconCmp /></div>
                   <h3 className="amen-slide-name">{a.name}</h3>

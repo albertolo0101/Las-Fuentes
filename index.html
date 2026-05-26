@@ -188,6 +188,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Caveat:wght@600;700&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- LCP preloads — browser fetches both hero images before React even renders -->
+  <link rel="preload" as="image" href="assets/centro-recreativo.png" fetchpriority="high" />
+  <link rel="preload" as="image" href="assets/hero-hotel.jpg"        fetchpriority="high" media="(min-width: 880px)" />
 </head>
 <body>
   <!--
